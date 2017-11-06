@@ -328,33 +328,33 @@ function Memorandum() {
         $delete.css("display", "none");
     }
 
-    //4.点击修改事件
-    function remarkInfo(ident) {
-        //1.跳转到infoPage
-        $infoPage.addClass("toInfoPage");
-        $infoPage.removeClass("toIndexPage");
-
-        //2.将本条信息的content返回到输入框内
-        $info.val(ident.children(".content").text());
-
-        //3.通过本条被修改的信息的date和本地数据库对比，若是相同的，则替换。
-        //a>.从本地服务器取出数据
-        var arrInfo = null;
-        if (!localStorage.info) {
-            return;
-        } else {
-            arrInfo = JSON.parse(localStorage.info);
-        }
-        var arrInfo_length = arrInfo.length;
-        var identDate = ident.children(".date").text();
-        for(var i = 0;i < arrInfo_length;i++){
-            if(identDate === arrInfo[i].date){
-
-                //获取到此时输入框内的值
-                var thisInfo = $info.val();
-            }
-        }
-    }
+    // //4.点击修改事件
+    // function remarkInfo(ident) {
+    //     //1.跳转到infoPage
+    //     $infoPage.addClass("toInfoPage");
+    //     $infoPage.removeClass("toIndexPage");
+    //
+    //     //2.将本条信息的content返回到输入框内
+    //     $info.val(ident.children(".content").text());
+    //
+    //     //3.通过本条被修改的信息的date和本地数据库对比，若是相同的，则替换。
+    //     //a>.从本地服务器取出数据
+    //     var arrInfo = null;
+    //     if (!localStorage.info) {
+    //         return;
+    //     } else {
+    //         arrInfo = JSON.parse(localStorage.info);
+    //     }
+    //     var arrInfo_length = arrInfo.length;
+    //     var identDate = ident.children(".date").text();
+    //     for(var i = 0;i < arrInfo_length;i++){
+    //         if(identDate === arrInfo[i].date){
+    //
+    //             //获取到此时输入框内的值
+    //             var thisInfo = $info.val();
+    //         }
+    //     }
+    // }
 
 
 }
