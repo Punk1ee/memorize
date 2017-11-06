@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/**
+ * Created by punkLee on 17/10/25.
+ */
+
+@font-face {
+    font-family: 'iconfont';  /* project id 377935 */
+    src: url('//at.alicdn.com/t/font_377935_vn4igqjqntztcsor.eot');
+    src: url('//at.alicdn.com/t/font_377935_vn4igqjqntztcsor.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_377935_vn4igqjqntztcsor.woff') format('woff'),
+    url('//at.alicdn.com/t/font_377935_vn4igqjqntztcsor.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_377935_vn4igqjqntztcsor.svg#iconfont') format('svg');
+}
+
+body,html{
+    height:100%;
+    overflow: hidden;
+}
+body{
+    position: relative;
+}
+/*index-page*/
+.index-page{
+    position: relative;
+    z-index: 1;
+    background: whitesmoke;
+}
+.index-page, .info-page{
+    width: 100%;
+    height:100%;
+}
+header, footer{
+    height: 40px;
+    text-align: center;
+    position: relative;
+}
+header p, footer p{
+    line-height: 40px;
+}
+.edit{
+    position: absolute;
+    top:0;
+    right: 10px;
+    color: #e9b114;
+}
+.mark-box{
+    height: calc(100% - 80px);
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    /*background: orange;*/
+}
+.count{
+    font-size: 14px;
+}
+.write{
+    width: 28px;
+    height: 28px;
+    background:  url("../img/edit.png") center right no-repeat;
+    background-size: 80%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.delete{
+    display: none;
+    color: #e9b114;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*info-page*/
+.info-page{
+    position: absolute;
+    top:0;
+    left: 100%;
+    z-index: 2;
+    transition: all .3s linear;
+    background: whitesmoke;
+
+}
+.info-head{
+    display: flex;
+    justify-content: space-between;
+}
+.back-wrap{
+    margin-left: 10px;
+    color: #e9b114;
+
+}
+.back{
+    font:normal lighter 16px "iconfont";
+}
+.save{
+    margin-right: 10px;
+}
+.info-form{
+    height: calc(100% - 80px);
+    padding: 0 10px;
+}
+#info{
+    width:100%;
+    height:100%;
+    padding: 5px;
+    resize: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.edit, .write, .delete, .save, .mark-li, .back-wrap{
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+.origin{
+    color: #dddddd;
+    text-shadow: 0 -1px #aaa;
+}
+.font-active{
+    text-shadow: none;
+    color: #e9b114;
+}
+.toInfoPage{
+    left:0;
+    box-shadow: 0 0 15px 0 #aaa ;
+}
+.toIndexPage{
+    left: 100%;
+    box-shadow: none;
+}
+
+.mark-li{
+    padding: 5px 0;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+.mark-li .select{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    line-height: 16px;
+
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+
+    opacity: 0;
+}
+.select.checked{
+    color: white;
+    background: #e9b114;
+}
+.mark-li p{
+    color: #888;
+    margin: 3px;
+    transition: all .3s linear;
+}
+
+.info-active{
+    transform: translateX(35px);
+}
+#info{
+    color: #888;
+}

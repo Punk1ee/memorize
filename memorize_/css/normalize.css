@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,table,dl,dt,dd,textarea，fieldset,img {
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearFloat{  zoom: 1;}
+.clearFloat:after{
+    content: '';
+    display: block;
+    visibility: hidden;
+    height:0;
+    clear: both;
+}
